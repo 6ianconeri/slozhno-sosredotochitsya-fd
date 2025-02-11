@@ -21,6 +21,19 @@
   font-weight: normal;
 }
 
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid;
+}
+
+.link:focus-within {
+  border: 1px solid;
+}
+
 /* Шапка страницы */
 
 .header {
@@ -46,6 +59,18 @@
 
 .header__theme-menu-item {
   list-style: none;
+}
+
+.header__theme-menu-item:hover {
+  border: 1px solid rgba(255, 0, 112, .4);
+}
+
+.header__theme-menu-item:focus-within {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-item:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button {

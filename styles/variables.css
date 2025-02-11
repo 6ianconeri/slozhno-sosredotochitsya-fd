@@ -5,7 +5,7 @@
 :root {
   --bg-color: #000028;
   --default-color: #DB00FF;
-  --accent-color: #FF0070;
+  --accent-color: rgb(255, 0, 112);
   --default-font-family: 'IBM Plex mono';
   --default-font-size: 18px;
 }
