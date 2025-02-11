@@ -2,7 +2,7 @@
 
 .page {
   background-color: var(--bg-color);
-  background-image: url(/images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -10,7 +10,7 @@
 
 .title-decor { 
   background-color: var(--accent-color);
-  color: var(--bg-color);
+  color: var(--accent-text-color);
   font-size: var(--default-font-size);
   font-weight: bold;
   line-height: 23.4px;
@@ -27,11 +27,15 @@
 }
 
 .link:hover {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--main-text-color);
 }
 
-.link:focus-within {
-  border: 1px solid;
+.link:focus-visible {
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
 }
 
 /* Шапка страницы */
@@ -65,10 +69,6 @@
   border: 1px solid rgba(255, 0, 112, .4);
 }
 
-.header__theme-menu-item:focus-within {
-  border-bottom: 1px solid var(--accent-color);
-}
-
 .header__theme-menu-item:focus-visible {
   border-bottom: 1px solid var(--accent-color);
 }
@@ -95,6 +95,7 @@
 }
 
 .header__description {
+  color: var(--accent-text-color);
   font-family: var(--default-font-family);
   font-weight: bold;
   font-size: var(--default-font-size);
@@ -178,7 +179,7 @@
   font-size: var(--default-font-size);
   line-height: 23.4px;
   font-family: var(--default-font-family);
-  color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
 .text {
@@ -186,7 +187,7 @@
   line-height: 23.4px;
   font-family: var(--default-font-family);
   font-size: var(--default-font-size);
-  color: #F1B2CE;
+  color: var(--main-text-color);
   padding-top: 10px;
 }
 
