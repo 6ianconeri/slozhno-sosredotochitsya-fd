@@ -395,5 +395,58 @@
 
 /* Планшеты */
 @media (width < 1024px) {
+  /* Шапка */
+  .header__corners {
+    inset-block-start: 20px;
+    inset-inline-end: 30px;
+  }
 
+  .header::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+  
+  .header::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+
+  .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+    padding-right: 5px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Мэйн контент */
+  .main__section {
+    column-gap: 40px;
+  }
+
+  .reasons .article-list {
+    grid-template-columns: 1fr;
+  }
+
+  .pictures {
+    gap: 17px;
+  }
+
+  /* Футер */
+  .footer::before {
+    inset-inline-end: 0px;
+    inset-block-start: -10px;
+  }
+
+  .footer::after {
+    inset-inline-start: 0px;
+    inset-block-end: 47px;
+  }
+
+  .footer__title {
+    margin-bottom: 50px;
+  }
 }
