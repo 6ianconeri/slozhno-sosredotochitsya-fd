@@ -179,7 +179,7 @@
   font-size: var(--default-font-size);
   line-height: 23.4px;
   font-family: var(--default-font-family);
-  color: var(--accent-text-color);
+  color: var(--accent-color);
 }
 
 .text {
