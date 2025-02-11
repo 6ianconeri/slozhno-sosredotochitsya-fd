@@ -27,7 +27,7 @@
     --accent-text-color: #353430;
   }
 
-  .theme-light .header__corners {
+  .header__corners {
     display: none;
   }
 }

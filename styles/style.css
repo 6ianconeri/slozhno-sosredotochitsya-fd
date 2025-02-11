@@ -8,7 +8,7 @@
   background-attachment: fixed;
 }
 
-.title-decor { 
+.title-decor {
   background-color: var(--accent-color);
   color: var(--accent-text-color);
   font-size: var(--default-font-size);
@@ -44,7 +44,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  justify-items: end; 
+  justify-items: end;
   align-items: center;
   height: 100vh;
   padding: 20px;
@@ -66,7 +66,7 @@
 }
 
 .header__theme-menu-item:hover {
-  border: 1px solid rgba(255, 0, 112, .4);
+  border: 1px solid rgba(255, 0, 112, 0.4);
 }
 
 .header__theme-menu-item:focus-visible {
@@ -117,7 +117,7 @@
 }
 
 .header__corners::after {
-  content: '';
+  content: "";
   border-radius: 50%;
   background-color: var(--accent-color);
   box-shadow: 0px 0px 10px 5px;
@@ -126,7 +126,7 @@
 }
 
 .header::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   border-inline-end: 1px solid var(--accent-color);
@@ -138,7 +138,7 @@
 }
 
 .header::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   border-inline-start: 1px solid var(--accent-color);
@@ -202,7 +202,7 @@
 
 /* Вторая секция */
 
-.reasons .main__section-title{
+.reasons .main__section-title {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
@@ -276,7 +276,7 @@
 }
 
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   border-inline-end: 1px solid var(--accent-color);
@@ -288,7 +288,7 @@
 }
 
 .footer::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   border-inline-start: 1px solid var(--accent-color);
@@ -300,100 +300,6 @@
 }
 
 /* Медиа-запросы */
-
-/* Мобильные устройства */
-
-
-@media (width < 768px) {
-  /* Шапка */
-  .header__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    padding-left: 10px;
-  }
-
-  .header__corners {
-    inset-block-start: 10px;
-    inset-inline-end: 19px;
-  }
-
-  .header::before {
-    inset-inline-end: 10px;
-    inset-block-start: 10px;
-  }
-  
-  .header::after {
-    inset-inline-start: 10px;
-    inset-block-end: 10px;
-  }
-
-  .header__theme-menu {
-    justify-self: end;
-    align-self: center;
-    padding-bottom: 12px;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .header__description {
-    inline-size: 105%;
-    margin-right: -6px;
-    margin-top: 10px;
-  }
-
-  /* Мэйн контент */
-  .main {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 40px;
-  }
-  
-  .main__section {
-    grid-template-columns: 1fr;
-    padding-bottom: 50px;
-  }
-
-  .reasons .article-list {
-    grid-template-columns: 1fr;
-  }
-
-  .gold-fish .main__section-title {
-    font-size: 18px;
-  }
-
-  .picture-item:nth-of-type(1),
-  .picture-item:nth-of-type(2),
-  .picture-item:nth-of-type(3),
-  .picture-item:nth-of-type(4),
-  .picture-item:nth-of-type(5) {
-    grid-column: span 3;
-  }
-
-  .pictures {
-    gap: 7px;
-  }
-
-  /* Футер */
-  .footer::before {
-    inset-inline-end: 0px;
-    inset-block-start: -5px;
-  }
-
-  .footer::after {
-    inset-inline-start: 0px;
-    inset-block-end: 26px;
-  }
-
-  .footer__title {
-    margin-bottom: 30px;
-  }
-}
-
-
-
-
 /* Планшеты */
 @media (width < 1024px) {
   /* Шапка */
@@ -406,7 +312,7 @@
     inset-inline-end: 20px;
     inset-block-start: 20px;
   }
-  
+
   .header::after {
     inset-inline-start: 20px;
     inset-block-end: 20px;
@@ -449,5 +355,95 @@
 
   .footer__title {
     margin-bottom: 50px;
+  }
+
+  /* Мобильные устройства */
+
+  @media (width < 768px) {
+    /* Шапка */
+    .header__title {
+      font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+      padding-left: 10px;
+    }
+
+    .header__corners {
+      inset-block-start: 10px;
+      inset-inline-end: 19px;
+    }
+
+    .header::before {
+      inset-inline-end: 10px;
+      inset-block-start: 10px;
+    }
+
+    .header::after {
+      inset-inline-start: 10px;
+      inset-block-end: 10px;
+    }
+
+    .header__theme-menu {
+      justify-self: end;
+      align-self: center;
+      padding-bottom: 12px;
+      padding-right: 0px;
+    }
+
+    .header__theme-menu-list {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .header__description {
+      inline-size: 105%;
+      margin-right: -6px;
+      margin-top: 10px;
+    }
+
+    /* Мэйн контент */
+    .main {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 40px;
+    }
+
+    .main__section {
+      grid-template-columns: 1fr;
+      padding-bottom: 49px;
+    }
+
+    .reasons .article-list {
+      grid-template-columns: 1fr;
+    }
+
+    .gold-fish .main__section-title {
+      font-size: 18px;
+    }
+
+    .picture-item:nth-of-type(1),
+    .picture-item:nth-of-type(2),
+    .picture-item:nth-of-type(3),
+    .picture-item:nth-of-type(4),
+    .picture-item:nth-of-type(5) {
+      grid-column: span 3;
+    }
+
+    .pictures {
+      gap: 7px;
+    }
+
+    /* Футер */
+    .footer::before {
+      inset-inline-end: 0px;
+      inset-block-start: -5px;
+    }
+
+    .footer::after {
+      inset-inline-start: 0px;
+      inset-block-end: 26px;
+    }
+
+    .footer__title {
+      margin-bottom: 30px;
+    }
   }
 }
