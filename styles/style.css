@@ -1,5 +1,274 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  background-image: url(/images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title-decor { 
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23.4px;
+  font-family: var(--default-font-family);
+}
+
+.no-bold {
+  font-weight: normal;
+}
+
+/* Шапка страницы */
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end; 
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.header__theme-menu {
+  justify-self: center;
+  align-self: start;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 21px;
+  line-height: 18px;
+}
+
+.header__theme-menu-item {
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  background-color: transparent;
+  text-transform: lowercase;
+  font-weight: normal;
+  font-family: var(--default-font-family);
+  font-size: 18px;
+  border-color: transparent;
+}
+
+.header__title {
+  color: var(--default-color);
+  font-family: var(--default-font-family);
+  font-weight: bold;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  justify-self: start;
+  line-height: 0.825;
+  margin-left: -20px;
+}
+
+.header__description {
+  font-family: var(--default-font-family);
+  font-weight: bold;
+  font-size: 18px;
+  inline-size: 50%;
+}
+
+.header__corners {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  color: var(--accent-color);
+  inset-block-start: 20px;
+  inset-inline-end: 30px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: var(--default-font-family);
+}
+
+.header__corners::after {
+  content: '';
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 10px 5px;
+  block-size: 9px;
+  inline-size: 9px;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+  inset-inline-end: 22px;
+  inset-block-start: 20px;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+}
+
+/* Основной контент страницы */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main__section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 80px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.main__section-content {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  font-family: var(--default-font-family);
+}
+
+.main__section-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  font-family: var(--default-font-family);
+  color: var(--accent-color);
+}
+
+.text {
+  font-weight: normal;
+  line-height: 23.4px;
+  font-family: var(--default-font-family);
+  font-size: 18px;
+  color: #F1B2CE;
+  padding-top: 10px;
+}
+
+/* Первая секция */
+
+.why .article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: span 2;
+}
+
+/* Вторая секция */
+
+.reasons .main__section-title{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.reasons .article-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / -1;
+  grid-row: span 2;
+  gap: 20px;
+}
+
+/* Третья секция */
+
+.gold-fish .article-list {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  gap: 20px;
+}
+
+/* Четвертая секция */
+
+.pictures .title-decor {
+  grid-column: span 3;
+}
+
+.picture {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.picture-item:nth-of-type(1) {
+  grid-column: span 2;
+}
+
+.picture-item:nth-of-type(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.picture-item:nth-of-type(3) {
+  grid-row: span 3;
+}
+
+.picture-item:nth-of-type(5) {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+/* Футер */
+
+.footer {
+  position: relative;
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__title {
+  color: var(--default-color);
+  font-family: var(--default-font-family);
+  font-weight: bold;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 0.825;
+  margin-bottom: 70px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  display: block;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+  inset-inline-end: 2px;
+  inset-block-start: -15px;
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  display: block;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  block-size: 25px;
+  inline-size: 25px;
+  inset-inline-start: 0px;
+  inset-block-end: 55px;
 }
