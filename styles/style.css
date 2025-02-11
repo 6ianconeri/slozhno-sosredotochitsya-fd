@@ -11,7 +11,7 @@
 .title-decor { 
   background-color: var(--accent-color);
   color: var(--bg-color);
-  font-size: 18px;
+  font-size: var(--default-font-size);
   font-weight: bold;
   line-height: 23.4px;
   font-family: var(--default-font-family);
@@ -54,7 +54,7 @@
   text-transform: lowercase;
   font-weight: normal;
   font-family: var(--default-font-family);
-  font-size: 18px;
+  font-size: var(--default-font-size);
   border-color: transparent;
 }
 
@@ -72,7 +72,7 @@
 .header__description {
   font-family: var(--default-font-family);
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--default-font-size);
   inline-size: 50%;
 }
 
@@ -85,7 +85,7 @@
   inset-block-start: 20px;
   inset-inline-end: 30px;
   font-weight: normal;
-  font-size: 18px;
+  font-size: var(--default-font-size);
   line-height: 25px;
   font-family: var(--default-font-family);
 }
@@ -143,14 +143,14 @@
 
 .main__section-content {
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--default-font-size);
   line-height: 23.4px;
   font-family: var(--default-font-family);
 }
 
 .main__section-title {
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--default-font-size);
   line-height: 23.4px;
   font-family: var(--default-font-family);
   color: var(--accent-color);
@@ -160,7 +160,7 @@
   font-weight: normal;
   line-height: 23.4px;
   font-family: var(--default-font-family);
-  font-size: 18px;
+  font-size: var(--default-font-size);
   color: #F1B2CE;
   padding-top: 10px;
 }
