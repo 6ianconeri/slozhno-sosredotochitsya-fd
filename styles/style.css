@@ -171,7 +171,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 80px;
-  column-gap: 40px;
+  column-gap: 20px;
   row-gap: 20px;
 }
 
@@ -233,7 +233,6 @@
 }
 
 /* Четвертая секция */
-
 .pictures .title-decor {
   grid-column: span 3;
 }
@@ -292,8 +291,8 @@
   border-block-start: 1px solid var(--secondary-accent-text-color);
   block-size: 25px;
   inline-size: 25px;
-  inset-inline-end: 2px;
-  inset-block-start: -15px;
+  inset-inline-end: 0px;
+  inset-block-start: -13px;
 }
 
 .footer::after {
@@ -305,7 +304,7 @@
   block-size: 25px;
   inline-size: 25px;
   inset-inline-start: 0px;
-  inset-block-end: 55px;
+  inset-block-end: 53px;
 }
 
 /* Медиа-запросы */
