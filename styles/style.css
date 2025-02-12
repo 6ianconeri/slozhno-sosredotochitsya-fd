@@ -14,7 +14,7 @@
   font-size: var(--default-font-size);
   font-weight: bold;
   line-height: 23.4px;
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
 }
 
 .no-bold {
@@ -31,11 +31,8 @@
 }
 
 .link:focus-visible {
-  border: 1px solid var(--accent-color);
-}
-
-.header__theme-menu-button_active {
-  pointer-events: none;
+  outline: none;
+  border: 1px solid var(--secondary-accent-text-color);
 }
 
 /* Шапка страницы */
@@ -47,6 +44,7 @@
   justify-items: end;
   align-items: center;
   height: 100vh;
+  min-height: 668px;
   padding: 20px;
 }
 
@@ -61,16 +59,21 @@
   line-height: 18px;
 }
 
+.header__theme-menu-list:focus-visible {
+  outline: none;
+}
+
 .header__theme-menu-item {
   list-style: none;
 }
 
 .header__theme-menu-item:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--secondary-accent-text-color);
 }
 
 .header__theme-menu-item:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+  border-bottom: 1px solid var(--secondary-accent-text-color);
 }
 
 .header__theme-menu-button {
@@ -78,14 +81,19 @@
   background-color: transparent;
   text-transform: lowercase;
   font-weight: normal;
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
   font-size: var(--default-font-size);
-  border-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--secondary-accent-text-color);
 }
 
 .header__title {
   color: var(--default-color);
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
   font-weight: bold;
   text-shadow: 4px 4px 0 var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -96,7 +104,7 @@
 
 .header__description {
   color: var(--accent-text-color);
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
   font-weight: bold;
   font-size: var(--default-font-size);
   inline-size: 50%;
@@ -113,14 +121,14 @@
   font-weight: normal;
   font-size: var(--default-font-size);
   line-height: 25px;
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
 }
 
 .header__corners::after {
   content: "";
   border-radius: 50%;
   background-color: var(--accent-color);
-  box-shadow: 0px 0px 10px 5px;
+  box-shadow: 0px 0px 4px 2px;
   block-size: 9px;
   inline-size: 9px;
 }
@@ -129,8 +137,8 @@
   content: "";
   position: absolute;
   display: block;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--secondary-accent-text-color);
+  border-block-start: 1px solid var(--secondary-accent-text-color);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-end: 22px;
@@ -141,8 +149,8 @@
   content: "";
   position: absolute;
   display: block;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--secondary-accent-text-color);
+  border-inline-start: 1px solid var(--secondary-accent-text-color);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-start: 20px;
@@ -163,7 +171,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 80px;
-  column-gap: 20px;
+  column-gap: 40px;
   row-gap: 20px;
 }
 
@@ -171,21 +179,21 @@
   font-weight: bold;
   font-size: var(--default-font-size);
   line-height: 23.4px;
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
 }
 
 .main__section-title {
   font-weight: bold;
   font-size: var(--default-font-size);
   line-height: 23.4px;
-  font-family: var(--default-font-family);
-  color: var(--accent-color);
+  font-family: var(--default-font-family), sans-serif;
+  color: var(--secondary-accent-text-color);
 }
 
 .text {
   font-weight: normal;
   line-height: 23.4px;
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
   font-size: var(--default-font-size);
   color: var(--main-text-color);
   padding-top: 10px;
@@ -261,26 +269,27 @@
   position: relative;
   display: grid;
   height: 100vh;
+  min-height: 668px;
   align-items: center;
   justify-content: center;
 }
 
 .footer__title {
   color: var(--default-color);
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family), sans-serif;
   font-weight: bold;
   text-shadow: 2px 2px 0 var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 0.825;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 }
 
 .footer::before {
   content: "";
   position: absolute;
   display: block;
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--secondary-accent-text-color);
+  border-block-start: 1px solid var(--secondary-accent-text-color);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-end: 2px;
@@ -291,8 +300,8 @@
   content: "";
   position: absolute;
   display: block;
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--secondary-accent-text-color);
+  border-block-end: 1px solid var(--secondary-accent-text-color);
   block-size: 25px;
   inline-size: 25px;
   inset-inline-start: 0px;
@@ -361,9 +370,13 @@
 
   @media (width < 768px) {
     /* Шапка */
+    .header {
+      padding: 10px;
+    }
+
     .header__title {
       font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-      padding-left: 10px;
+      padding-left: 20px;
     }
 
     .header__corners {
@@ -384,19 +397,15 @@
     .header__theme-menu {
       justify-self: end;
       align-self: center;
-      padding-bottom: 12px;
-      padding-right: 0px;
     }
 
     .header__theme-menu-list {
       flex-direction: column;
-      gap: 12px;
+      gap: 17px;
     }
 
     .header__description {
-      inline-size: 105%;
-      margin-right: -6px;
-      margin-top: 10px;
+      inline-size: 100%;
     }
 
     /* Мэйн контент */
@@ -404,6 +413,7 @@
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 40px;
+      column-gap: 0px;
     }
 
     .main__section {
@@ -432,6 +442,10 @@
     }
 
     /* Футер */
+    .footer {
+      padding: 10px;
+    }
+
     .footer::before {
       inset-inline-end: 0px;
       inset-block-start: -5px;

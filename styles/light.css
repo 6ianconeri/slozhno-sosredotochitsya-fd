@@ -6,11 +6,12 @@
 
 :root.theme-light {
   --bg-color: #fff1f7;
-  --bg-image: url(/images/cover-image-light.png);
+  --bg-image: url(../images/cover-image-light.png);
   --default-color: #ffc2e6;
   --accent-color: #ff8dcb;
   --main-text-color: #353430;
   --accent-text-color: #353430;
+  --secondary-accent-text-color: #353430;
 }
 
 .theme-light .header__corners {
@@ -20,11 +21,12 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #fff1f7;
-    --bg-image: url(/images/cover-image-light.png);
+    --bg-image: url(../images/cover-image-light.png);
     --default-color: #ffc2e6;
     --accent-color: #ff8dcb;
     --main-text-color: #353430;
     --accent-text-color: #353430;
+    --secondary-accent-text-color: #353430;
   }
 
   .theme-auto .header__corners {
