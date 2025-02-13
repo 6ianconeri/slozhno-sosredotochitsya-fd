@@ -14,17 +14,3 @@
   --secondary-accent-text-color: rgb(255, 0, 112);
   --border-color: rgba(255, 0, 112, .4);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #000028;
-  --bg-image: url(../images/cover-image-dark.png);
-  --default-color: #db00ff;
-  --accent-color: rgb(255, 0, 112);
-  --main-text-color: #F1B2CE;
-  --accent-text-color: #000028;
-  --secondary-accent-text-color: rgb(255, 0, 112);
-  --border-color: rgba(255, 0, 112, .4);
-  }
-  
-}

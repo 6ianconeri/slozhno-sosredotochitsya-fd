@@ -12,4 +12,5 @@
   --secondary-accent-text-color: rgb(255, 0, 112);
   --default-font-family: 'IBM Plex mono';
   --default-font-size: 18px;
+  --border-color: rgba(255, 0, 112, .4);
 }
