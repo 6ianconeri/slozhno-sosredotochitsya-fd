@@ -81,14 +81,6 @@
   line-height: 18px;
 }
 
-.header__theme-menu-button:focus-visible {
-  outline: none;
-}
-
-.header__theme-menu-button {
-  list-style: none;
-}
-
 .header__theme-menu-button:hover {
   border: 1px solid var(--border-color);
 }
@@ -99,6 +91,7 @@
 }
 
 .header__theme-menu-button {
+  list-style: none;
   color: var(--secondary-accent-text-color);
   background-color: transparent;
   text-transform: lowercase;
