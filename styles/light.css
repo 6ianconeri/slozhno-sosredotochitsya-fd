@@ -11,10 +11,11 @@
   --accent-color: #ff8dcb;
   --main-text-color: #353430;
   --accent-text-color: #353430;
-  --secondary-accent-text-color: #353430;
+  --secondary-accent-text-color: rgb(53, 52, 48);
+  --border-color: rgba(53, 52, 48, .4);
 }
 
-.theme-light .header__corners {
+.theme-light .rec {
   display: none;
 }
 
@@ -27,9 +28,10 @@
     --main-text-color: #353430;
     --accent-text-color: #353430;
     --secondary-accent-text-color: #353430;
+    --border-color: rgba(53, 52, 48, .4);
   }
 
-  .theme-auto .header__corners {
+  .theme-auto .rec {
     display: none;
   }
   
